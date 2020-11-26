@@ -1,0 +1,318 @@
+{
+	"version": 1,
+	"collections": [
+		{
+			"id": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
+			"name": "FWA_Movies_API",
+			"description": "",
+			"order": [
+				"2d7a9d39-07f4-3c91-cb2b-2db0fa69e8fd",
+				"62cf9214-70db-a6a1-b42b-008226171f8e",
+				"5cf620aa-2f8f-6d9f-df46-8e2c867f93bc",
+				"fe054e07-f5a0-5895-e46a-f0c3d214ad34",
+				"45718e52-1eb1-bd79-6d96-4552fa301263",
+				"dad5486e-05a9-fc72-e22d-62ffb1f0a851",
+				"cf37fbf9-eacf-7e76-6979-98cfddd5cc82",
+				"5a488fc2-8e20-a02e-656c-f81952e25c27",
+				"21ba3bd7-3c09-c0fb-c9b4-6c00d1450e7d"
+			],
+			"folders": [],
+			"folders_order": [],
+			"timestamp": 0,
+			"synced": true,
+			"remote_id": 0,
+			"owner": 0,
+			"sharedWithTeam": false,
+			"subscribed": false,
+			"remoteLink": "",
+			"remoteLinkUpdatedAt": null,
+			"public": false,
+			"createdAt": 1606331259195,
+			"updatedAt": "2020-11-26T01:57:16.521Z",
+			"write": true,
+			"published": false,
+			"favorite": false,
+			"permissions": {},
+			"syncedPermissions": {},
+			"requests": [
+				{
+					"id": "21ba3bd7-3c09-c0fb-c9b4-6c00d1450e7d",
+					"headers": "Content-Type: application/json\n",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"enabled": true
+						}
+					],
+					"url": "{{URL}}/movieratings",
+					"queryParams": [],
+					"preRequestScript": null,
+					"pathVariables": {},
+					"pathVariableData": [],
+					"method": "POST",
+					"data": "{\r\n        \"RatingId\": 28,\r\n        \"MovieId\": 19,\r\n        \"UserId\": 1,        \r\n        \"Rating\": 1\r\n}\r\n\r\n",
+					"dataMode": "raw",
+					"tests": null,
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1606339128048,
+					"name": "Update User Rating",
+					"description": "",
+					"collectionId": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
+					"responses": []
+				},
+				{
+					"id": "2d7a9d39-07f4-3c91-cb2b-2db0fa69e8fd",
+					"headers": "",
+					"headerData": [],
+					"url": "{{URL}}/movie?title=The&year=2009&genere=Comedy",
+					"queryParams": [
+						{
+							"key": "title",
+							"value": "The",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						},
+						{
+							"key": "year",
+							"value": "2009",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						},
+						{
+							"key": "genere",
+							"value": "Comedy",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						}
+					],
+					"preRequestScript": null,
+					"pathVariables": {},
+					"pathVariableData": [],
+					"method": "GET",
+					"data": [],
+					"dataMode": "params",
+					"tests": null,
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1606358272009,
+					"name": "Movies by the filter criteria – with all 3 params",
+					"description": "",
+					"collectionId": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
+					"responses": []
+				},
+				{
+					"id": "45718e52-1eb1-bd79-6d96-4552fa301263",
+					"name": "Top 'n' Movies",
+					"description": "",
+					"collectionId": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
+					"method": "GET",
+					"headers": "",
+					"data": [],
+					"rawModeData": "",
+					"url": "{{URL}}/movie/top/2",
+					"responses": [],
+					"pathVariableData": [],
+					"queryParams": [],
+					"headerData": [],
+					"owner": 0,
+					"collection": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
+					"collection_id": "db29ce92-2291-4ac7-4c94-b2cbca9719c1"
+				},
+				{
+					"id": "5a488fc2-8e20-a02e-656c-f81952e25c27",
+					"headers": "Content-Type: application/json\n",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"enabled": true
+						}
+					],
+					"url": "{{URL}}/movieratings",
+					"queryParams": [],
+					"preRequestScript": null,
+					"pathVariables": {},
+					"pathVariableData": [],
+					"method": "POST",
+					"data": "{\r\n        \r\n        \"MovieId\": 19,\r\n        \"UserId\": 1,        \r\n        \"Rating\": 1    \r\n    }\r\n\r\n",
+					"dataMode": "raw",
+					"tests": null,
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1606339303498,
+					"name": "Add User Rating",
+					"description": "",
+					"collectionId": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
+					"responses": []
+				},
+				{
+					"id": "5cf620aa-2f8f-6d9f-df46-8e2c867f93bc",
+					"headers": "",
+					"headerData": [],
+					"url": "{{URL}}/movie?year=2009",
+					"queryParams": [
+						{
+							"key": "year",
+							"value": "2009",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						}
+					],
+					"preRequestScript": null,
+					"pathVariables": {},
+					"pathVariableData": [],
+					"method": "GET",
+					"data": [],
+					"dataMode": "params",
+					"tests": null,
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1606358527192,
+					"name": "Movies by the filter criteria  - Partial search string",
+					"description": "",
+					"collectionId": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
+					"responses": []
+				},
+				{
+					"id": "62cf9214-70db-a6a1-b42b-008226171f8e",
+					"headers": "",
+					"headerData": [],
+					"url": "{{URL}}/movie?year=2009&genere=Comedy",
+					"queryParams": [
+						{
+							"key": "year",
+							"value": "2009",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						},
+						{
+							"key": "genere",
+							"value": "Comedy",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						}
+					],
+					"preRequestScript": null,
+					"pathVariables": {},
+					"pathVariableData": [],
+					"method": "GET",
+					"data": [],
+					"dataMode": "params",
+					"tests": null,
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1606358486558,
+					"name": "Movies by the filter criteria  - With 2 params",
+					"description": "",
+					"collectionId": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
+					"responses": []
+				},
+				{
+					"id": "cf37fbf9-eacf-7e76-6979-98cfddd5cc82",
+					"headers": "",
+					"headerData": [],
+					"url": "{{URL}}/movie/top/5?userId=1",
+					"queryParams": [
+						{
+							"key": "userId",
+							"value": "1",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						}
+					],
+					"preRequestScript": null,
+					"pathVariables": {},
+					"pathVariableData": [],
+					"method": "GET",
+					"data": [],
+					"dataMode": "params",
+					"tests": null,
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1606355873859,
+					"name": "Top 'n' Movies By User Ratings",
+					"description": "",
+					"collectionId": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
+					"responses": []
+				},
+				{
+					"id": "dad5486e-05a9-fc72-e22d-62ffb1f0a851",
+					"headers": "",
+					"headerData": [],
+					"url": "{{URL}}/movie/top?userId=1",
+					"queryParams": [
+						{
+							"key": "userId",
+							"value": "1",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						}
+					],
+					"preRequestScript": null,
+					"pathVariables": {},
+					"pathVariableData": [],
+					"method": "GET",
+					"data": [],
+					"dataMode": "params",
+					"tests": null,
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1606355833424,
+					"name": "Top 5 (default) Movies By User Rating",
+					"description": "",
+					"collectionId": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
+					"responses": []
+				},
+				{
+					"id": "fe054e07-f5a0-5895-e46a-f0c3d214ad34",
+					"name": "Top 'n' Movies - default ie top 5",
+					"description": "",
+					"collectionId": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
+					"method": "GET",
+					"headers": "",
+					"data": [],
+					"rawModeData": "",
+					"url": "{{URL}}/movie/top",
+					"responses": [],
+					"pathVariableData": [],
+					"queryParams": [],
+					"headerData": [],
+					"owner": 0,
+					"collection": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
+					"collection_id": "db29ce92-2291-4ac7-4c94-b2cbca9719c1"
+				}
+			]
+		}
+	],
+	"environments": [
+		{
+			"id": "25698353-b2b5-e382-f1b1-e4281ab488f4",
+			"name": "FWA_Dev",
+			"values": [
+				{
+					"key": "URL",
+					"value": "http://localhost:5000/api/v1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"timestamp": 1606331356030,
+			"synced": false
+		}
+	],
+	"headerPresets": [],
+	"globals": []
+}
