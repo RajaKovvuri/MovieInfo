@@ -2,42 +2,55 @@
 	"version": 1,
 	"collections": [
 		{
-			"id": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
+			"id": "37b1fd73-78f1-4932-9cc0-0164d94469ec",
 			"name": "FWA_Movies_API",
 			"description": "",
+			"auth": null,
+			"events": null,
+			"variables": [],
 			"order": [
-				"2d7a9d39-07f4-3c91-cb2b-2db0fa69e8fd",
-				"62cf9214-70db-a6a1-b42b-008226171f8e",
-				"5cf620aa-2f8f-6d9f-df46-8e2c867f93bc",
-				"fe054e07-f5a0-5895-e46a-f0c3d214ad34",
-				"45718e52-1eb1-bd79-6d96-4552fa301263",
-				"dad5486e-05a9-fc72-e22d-62ffb1f0a851",
-				"cf37fbf9-eacf-7e76-6979-98cfddd5cc82",
-				"5a488fc2-8e20-a02e-656c-f81952e25c27",
-				"21ba3bd7-3c09-c0fb-c9b4-6c00d1450e7d"
+				"d5845f7f-21bc-413e-8973-272be5a417e2",
+				"c7454f12-d62f-43cd-a761-6719d273228a",
+				"f600815d-b609-4f55-a431-d67a20697769",
+				"e4285c8e-f171-40fd-8281-f45eda9b88ab",
+				"20880836-3a4c-4737-b729-bde15e4e24e5",
+				"b18c1eba-d5f2-480c-b864-3cdf797d50bd",
+				"253074fd-4794-4b1f-b859-e3157d5cfcc8",
+				"daac2b34-a007-46bb-88e5-7f0d1baa80aa"
 			],
-			"folders": [],
 			"folders_order": [],
-			"timestamp": 0,
-			"synced": true,
-			"remote_id": 0,
-			"owner": 0,
-			"sharedWithTeam": false,
-			"subscribed": false,
-			"remoteLink": "",
-			"remoteLinkUpdatedAt": null,
-			"public": false,
-			"createdAt": 1606331259195,
-			"updatedAt": "2020-11-26T01:57:16.521Z",
-			"write": true,
-			"published": false,
-			"favorite": false,
-			"permissions": {},
-			"syncedPermissions": {},
+			"protocolProfileBehavior": {},
+			"folders": [],
 			"requests": [
 				{
-					"id": "21ba3bd7-3c09-c0fb-c9b4-6c00d1450e7d",
-					"headers": "Content-Type: application/json\n",
+					"id": "20880836-3a4c-4737-b729-bde15e4e24e5",
+					"name": "Top 'n' Movies",
+					"url": "{{URL}}/movie/top/2",
+					"description": "",
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "37b1fd73-78f1-4932-9cc0-0164d94469ec",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "253074fd-4794-4b1f-b859-e3157d5cfcc8",
+					"name": "Add User Rating",
+					"url": "{{URL}}/movieratings",
+					"description": "",
+					"data": [],
+					"dataOptions": null,
+					"dataMode": "raw",
 					"headerData": [
 						{
 							"key": "Content-Type",
@@ -46,28 +59,87 @@
 							"enabled": true
 						}
 					],
-					"url": "{{URL}}/movieratings",
-					"queryParams": [],
-					"preRequestScript": null,
-					"pathVariables": {},
-					"pathVariableData": [],
 					"method": "POST",
-					"data": "{\r\n        \"RatingId\": 28,\r\n        \"MovieId\": 19,\r\n        \"UserId\": 1,        \r\n        \"Rating\": 1\r\n}\r\n\r\n",
-					"dataMode": "raw",
-					"tests": null,
-					"currentHelper": "normal",
-					"helperAttributes": {},
-					"time": 1606339128048,
-					"name": "Update User Rating",
-					"description": "",
-					"collectionId": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
-					"responses": []
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "37b1fd73-78f1-4932-9cc0-0164d94469ec",
+					"rawModeData": "{\r\n        \r\n        \"MovieId\": 19,\r\n        \"UserId\": 1,        \r\n        \"Rating\": 1    \r\n    }\r\n\r\n",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
 				},
 				{
-					"id": "2d7a9d39-07f4-3c91-cb2b-2db0fa69e8fd",
-					"headers": "",
+					"id": "b18c1eba-d5f2-480c-b864-3cdf797d50bd",
+					"name": "Top 'n' Movies By User's Rating",
+					"url": "{{URL}}/movie/top/5/1",
+					"description": "",
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
 					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "37b1fd73-78f1-4932-9cc0-0164d94469ec",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "c7454f12-d62f-43cd-a761-6719d273228a",
+					"name": "Movies by the filter criteria  - With 2 params",
+					"url": "{{URL}}/movie?year=2009&genere=Comedy",
+					"description": "",
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "year",
+							"value": "2009",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						},
+						{
+							"key": "genere",
+							"value": "Comedy",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						}
+					],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "37b1fd73-78f1-4932-9cc0-0164d94469ec",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "d5845f7f-21bc-413e-8973-272be5a417e2",
+					"name": "Movies by the filter criteria – with all 3 params",
 					"url": "{{URL}}/movie?title=The&year=2009&genere=Comedy",
+					"description": "",
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
 					"queryParams": [
 						{
 							"key": "title",
@@ -91,42 +163,23 @@
 							"enabled": true
 						}
 					],
-					"preRequestScript": null,
-					"pathVariables": {},
-					"pathVariableData": [],
-					"method": "GET",
-					"data": [],
-					"dataMode": "params",
-					"tests": null,
-					"currentHelper": "normal",
-					"helperAttributes": {},
-					"time": 1606358272009,
-					"name": "Movies by the filter criteria – with all 3 params",
-					"description": "",
-					"collectionId": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
-					"responses": []
-				},
-				{
-					"id": "45718e52-1eb1-bd79-6d96-4552fa301263",
-					"name": "Top 'n' Movies",
-					"description": "",
-					"collectionId": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
-					"method": "GET",
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "37b1fd73-78f1-4932-9cc0-0164d94469ec",
 					"headers": "",
-					"data": [],
-					"rawModeData": "",
-					"url": "{{URL}}/movie/top/2",
-					"responses": [],
-					"pathVariableData": [],
-					"queryParams": [],
-					"headerData": [],
-					"owner": 0,
-					"collection": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
-					"collection_id": "db29ce92-2291-4ac7-4c94-b2cbca9719c1"
+					"pathVariables": {}
 				},
 				{
-					"id": "5a488fc2-8e20-a02e-656c-f81952e25c27",
-					"headers": "Content-Type: application/json\n",
+					"id": "daac2b34-a007-46bb-88e5-7f0d1baa80aa",
+					"name": "Update User Rating",
+					"url": "{{URL}}/movieratings",
+					"description": "",
+					"data": [],
+					"dataOptions": null,
+					"dataMode": "raw",
 					"headerData": [
 						{
 							"key": "Content-Type",
@@ -135,182 +188,188 @@
 							"enabled": true
 						}
 					],
-					"url": "{{URL}}/movieratings",
-					"queryParams": [],
-					"preRequestScript": null,
-					"pathVariables": {},
-					"pathVariableData": [],
 					"method": "POST",
-					"data": "{\r\n        \r\n        \"MovieId\": 19,\r\n        \"UserId\": 1,        \r\n        \"Rating\": 1    \r\n    }\r\n\r\n",
-					"dataMode": "raw",
-					"tests": null,
-					"currentHelper": "normal",
-					"helperAttributes": {},
-					"time": 1606339303498,
-					"name": "Add User Rating",
-					"description": "",
-					"collectionId": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
-					"responses": []
-				},
-				{
-					"id": "5cf620aa-2f8f-6d9f-df46-8e2c867f93bc",
-					"headers": "",
-					"headerData": [],
-					"url": "{{URL}}/movie?year=2009",
-					"queryParams": [
-						{
-							"key": "year",
-							"value": "2009",
-							"equals": true,
-							"description": "",
-							"enabled": true
-						}
-					],
-					"preRequestScript": null,
-					"pathVariables": {},
-					"pathVariableData": [],
-					"method": "GET",
-					"data": [],
-					"dataMode": "params",
-					"tests": null,
-					"currentHelper": "normal",
-					"helperAttributes": {},
-					"time": 1606358527192,
-					"name": "Movies by the filter criteria  - Partial search string",
-					"description": "",
-					"collectionId": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
-					"responses": []
-				},
-				{
-					"id": "62cf9214-70db-a6a1-b42b-008226171f8e",
-					"headers": "",
-					"headerData": [],
-					"url": "{{URL}}/movie?year=2009&genere=Comedy",
-					"queryParams": [
-						{
-							"key": "year",
-							"value": "2009",
-							"equals": true,
-							"description": "",
-							"enabled": true
-						},
-						{
-							"key": "genere",
-							"value": "Comedy",
-							"equals": true,
-							"description": "",
-							"enabled": true
-						}
-					],
-					"preRequestScript": null,
-					"pathVariables": {},
-					"pathVariableData": [],
-					"method": "GET",
-					"data": [],
-					"dataMode": "params",
-					"tests": null,
-					"currentHelper": "normal",
-					"helperAttributes": {},
-					"time": 1606358486558,
-					"name": "Movies by the filter criteria  - With 2 params",
-					"description": "",
-					"collectionId": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
-					"responses": []
-				},
-				{
-					"id": "cf37fbf9-eacf-7e76-6979-98cfddd5cc82",
-					"headers": "",
-					"headerData": [],
-					"url": "{{URL}}/movie/top/5?userId=1",
-					"queryParams": [
-						{
-							"key": "userId",
-							"value": "1",
-							"equals": true,
-							"description": "",
-							"enabled": true
-						}
-					],
-					"preRequestScript": null,
-					"pathVariables": {},
-					"pathVariableData": [],
-					"method": "GET",
-					"data": [],
-					"dataMode": "params",
-					"tests": null,
-					"currentHelper": "normal",
-					"helperAttributes": {},
-					"time": 1606355873859,
-					"name": "Top 'n' Movies By User Ratings",
-					"description": "",
-					"collectionId": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
-					"responses": []
-				},
-				{
-					"id": "dad5486e-05a9-fc72-e22d-62ffb1f0a851",
-					"headers": "",
-					"headerData": [],
-					"url": "{{URL}}/movie/top?userId=1",
-					"queryParams": [
-						{
-							"key": "userId",
-							"value": "1",
-							"equals": true,
-							"description": "",
-							"enabled": true
-						}
-					],
-					"preRequestScript": null,
-					"pathVariables": {},
-					"pathVariableData": [],
-					"method": "GET",
-					"data": [],
-					"dataMode": "params",
-					"tests": null,
-					"currentHelper": "normal",
-					"helperAttributes": {},
-					"time": 1606355833424,
-					"name": "Top 5 (default) Movies By User Rating",
-					"description": "",
-					"collectionId": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
-					"responses": []
-				},
-				{
-					"id": "fe054e07-f5a0-5895-e46a-f0c3d214ad34",
-					"name": "Top 'n' Movies - default ie top 5",
-					"description": "",
-					"collectionId": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
-					"method": "GET",
-					"headers": "",
-					"data": [],
-					"rawModeData": "",
-					"url": "{{URL}}/movie/top",
-					"responses": [],
 					"pathVariableData": [],
 					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "37b1fd73-78f1-4932-9cc0-0164d94469ec",
+					"rawModeData": "{\r\n        \"RatingId\": 28,\r\n        \"MovieId\": 19,\r\n        \"UserId\": 1,        \r\n        \"Rating\": 1\r\n}\r\n\r\n",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "e4285c8e-f171-40fd-8281-f45eda9b88ab",
+					"name": "Top 'n' Movies - default ie top 5",
+					"url": "{{URL}}/movie/top",
+					"description": "",
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
 					"headerData": [],
-					"owner": 0,
-					"collection": "db29ce92-2291-4ac7-4c94-b2cbca9719c1",
-					"collection_id": "db29ce92-2291-4ac7-4c94-b2cbca9719c1"
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "37b1fd73-78f1-4932-9cc0-0164d94469ec",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "f600815d-b609-4f55-a431-d67a20697769",
+					"name": "Movies by the filter criteria  - Partial search string",
+					"url": "{{URL}}/movie?year=2009",
+					"description": "",
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "year",
+							"value": "2009",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						}
+					],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "37b1fd73-78f1-4932-9cc0-0164d94469ec",
+					"headers": "",
+					"pathVariables": {}
 				}
 			]
 		}
 	],
 	"environments": [
 		{
-			"id": "25698353-b2b5-e382-f1b1-e4281ab488f4",
+			"id": "4bb89b57-7ac5-4059-8764-8a6b1406953a",
 			"name": "FWA_Dev",
 			"values": [
 				{
 					"key": "URL",
 					"value": "http://localhost:5000/api/v1",
-					"description": "",
 					"type": "text",
+					"description": "",
 					"enabled": true
 				}
-			],
-			"timestamp": 1606331356030,
-			"synced": false
+			]
+		},
+		{
+			"id": "54eba0ae-9b6e-4284-8d0e-64d310023ee7",
+			"name": "FWA_Dev",
+			"values": [
+				{
+					"key": "URL",
+					"value": "http://localhost:5000/api/v1",
+					"type": "text",
+					"description": "",
+					"enabled": true
+				}
+			]
+		},
+		{
+			"id": "8d53a19d-8dd8-46ea-9e57-6895c7c7ec58",
+			"name": "My Workspace - globals",
+			"values": [
+				{
+					"key": "echo_digest_nonce",
+					"value": "",
+					"enabled": true
+				},
+				{
+					"key": "echo_digest_realm",
+					"value": "",
+					"enabled": true
+				}
+			]
+		},
+		{
+			"id": "a96cb168-7a88-4cb1-bafc-a81dbcef8bfc",
+			"name": "My Workspace - globals",
+			"values": [
+				{
+					"key": "echo_digest_nonce",
+					"value": "",
+					"enabled": true
+				},
+				{
+					"key": "echo_digest_realm",
+					"value": "",
+					"enabled": true
+				}
+			]
+		},
+		{
+			"id": "af00b110-2b18-44a0-af00-3407879895cf",
+			"name": "FWA_Dev",
+			"values": [
+				{
+					"key": "URL",
+					"value": "http://localhost:5000/api/v1",
+					"type": "text",
+					"description": "",
+					"enabled": true
+				}
+			]
+		},
+		{
+			"id": "db92960d-c812-4634-9d2b-32af2ba55910",
+			"name": "My Workspace - globals",
+			"values": [
+				{
+					"key": "echo_digest_nonce",
+					"value": "",
+					"enabled": true
+				},
+				{
+					"key": "echo_digest_realm",
+					"value": "",
+					"enabled": true
+				}
+			]
+		},
+		{
+			"id": "e2ea6247-bd4b-4caf-81a8-fa68a1b440ad",
+			"name": "FWA_Dev",
+			"values": [
+				{
+					"key": "URL",
+					"value": "http://localhost:5000/api/v1",
+					"type": "text",
+					"description": "",
+					"enabled": true
+				}
+			]
+		},
+		{
+			"id": "ae6d3d69-0c70-4afe-9de6-7708bbe2c544",
+			"name": "My Workspace - globals",
+			"values": [
+				{
+					"key": "echo_digest_nonce",
+					"value": "",
+					"enabled": true
+				},
+				{
+					"key": "echo_digest_realm",
+					"value": "",
+					"enabled": true
+				}
+			]
 		}
 	],
 	"headerPresets": [],
